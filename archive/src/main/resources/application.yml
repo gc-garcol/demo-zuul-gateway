@@ -12,7 +12,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    appname: dicomarchive
+    appname: archive
   client:
     enabled: true
     healthcheck:

@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+dcm4chee-archive:
+  port: 8080
+  aet: DCM4CHEE
+
+spring:
+  application:
+    name: archive
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    appname: dicomarchive
+  client:
+    enabled: true
+    healthcheck:
+      enabled: false
+    fetch-registry: true
+    register-with-eureka: true
+    instance-info-replication-interval-seconds: 10
+    registry-fetch-interval-seconds: 10
+    service-url:
+      defaultZone: ${EUREKA_SERVICEURL:http://admin:admin@localhost:8761/eureka/}

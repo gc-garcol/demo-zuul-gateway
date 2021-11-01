@@ -29,20 +29,20 @@ eureka:
 #    reactor.ipc: INFO
 #    io.netty: INFO
 
-#zuul:
-#  routes:
-#    archive:
-#      path: /archive
-#      url: http://localhost:8085/
-
 zuul:
   routes:
     archive:
-      path: /archive
-      serviceId: archive
-ribbon:
-  eureka:
-    enabled: false
-archive :
-  ribbon:
-    listOfServers: http://localhost:8085/
+      path: /archive/**
+      url: http://localhost:8085/
+
+#zuul:
+#  routes:
+#    archive:
+#      path: /archive/**
+#      serviceId: archive
+#ribbon:
+#  eureka:
+#    enabled: false
+#archive :
+#  ribbon:
+#    listOfServers: http://localhost:8085/

@@ -29,11 +29,16 @@ eureka:
 #    reactor.ipc: INFO
 #    io.netty: INFO
 
+#zuul:
+#  routes:
+#    archive:
+#      path: /archive
+#      url: http://localhost:8085/
+
 zuul:
   routes:
     archive:
       path: /archive
-#      url: http://localhost:8085/
       serviceId: archive
 ribbon:
   eureka:
